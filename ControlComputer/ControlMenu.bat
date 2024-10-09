@@ -35,4 +35,4 @@ goto end
 
 :Restart
 :: Envoi d'une requête POST pour redémarrer
-curl
+curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"content\": \"Restart\"}" %webhook%
