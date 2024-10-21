@@ -29,10 +29,29 @@ goto end
 
 :CloseApp
 echo.
+echo Entrez l'application a fermé:
+:: Lecture de l'application saisie
+set /p ClosedApp=
 :: Envoi d'une requête POST pour fermer l'application
 curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"content\": \"Close %ClosedApp%\"}" %webhook%
 goto end
 
 :Restart
 :: Envoi d'une requête POST pour redémarrer
-curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"content\": \"Restart\"}" %webhook%
+curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"content\": \"restart\"}" %webhook%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
